@@ -2,7 +2,7 @@ import csv
 import os
 
 # Ask the user for the input file path
-input_file = input("Please enter the input file path (e.g., /path/to/checks.csv): ").strip()
+input_file = input("Please enter the input file path (e.g., /path/to/checks.csv[/home/optit/Documents/Big_Data_analysis_and_sortings/csv_python_sort/checks.csv]# Replace with your file ): ").strip()
 
 # Check if the file exists
 if not os.path.isfile(input_file):
