@@ -1,0 +1,128 @@
+Category,Control, priority ,Mod
+Backup,Backup report plan should exist in a region where backup plan is enabled,p2,Compliance
+CloudFormation,CloudFormation stacks should have notifications enabled,p2,Compliance
+CloudFormation,CloudFormation stacks should have rollback enabled,p2,Compliance
+CloudFormation,Cloudformation stacks termination protection should be enabled,p2,Compliance
+CloudFront,CloudFront distributions access logs should be enabled,p2,Compliance
+CloudFront,CloudFront distributions should have AWS WAF enabled,p2,Compliance
+CloudFront,CloudFront distributions should have field level encryption enabled,p2,Compliance
+CloudFront,CloudFront distributions should have geo restriction enabled,p2,Compliance
+CloudFront,CloudFront distributions should have origin access identity enabled,p2,Compliance
+CloudFront,CloudFront distributions should use custom SSL/TLS certificates,p2,Compliance
+CloudFront,CloudFront distributions should use SNI to serve HTTPS requests,p2,Compliance
+CloudTrail,At least one CloudTrail trail should be enabled in the AWS account,p2,Compliance
+CloudTrail,At least one enabled trail should be present in a region,p2,Compliance
+CloudTrail,At least one trail should be enabled with security best practices,p2,Compliance
+CloudTrail,CloudTrail trail log file validation should be enabled,p2,Compliance
+CloudTrail,CloudTrail trail S3 buckets MFA delete should be enabled,p2,Compliance
+CloudTrail,CloudTrail trails should be enabled in all regions,p2,Compliance
+CloudTrail,CloudTrail trails should have insight selectors and logging enabled,p2,Compliance
+CloudWatch,CloudWatch alarm action should be enabled,p2,Compliance
+CloudWatch,Ensure a log metric filter and alarm exist for security group changes,p2,Compliance
+CodeBuild,CodeBuild project environments should not have privileged mode enabled,p2,Compliance
+DAX,Directory Service directories should have SNS notification enabled,p2,Compliance
+DLM,DLM EBS snapshot lifecycle policy should be enabled,p2,Compliance
+DMS,DMS replication instances should have automatic minor version upgrade enabled,p2,Compliance
+DocumentDB,DocumentDB clusters should have deletion protection enabled,p2,Compliance
+DRS,DRS jobs should be enabled,p2,Compliance
+DynamoDB,DynamoDB table auto scaling should be enabled,p2,Compliance
+DynamoDB,DynamoDB table should have deletion protection enabled,p2,Compliance
+DynamoDB,DynamoDB table should have encryption enabled,p2,Compliance
+EBS,Attached EBS volumes should have delete on termination enabled,p2,Compliance
+EBS,EBS volume encryption at rest should be enabled,p2,Compliance
+EC2,EBS default encryption should be enabled,p2,Compliance
+EC2,EC2 Client VPN endpoints should have client connection logging enabled,p2,Compliance
+EC2,EC2 instance detailed monitoring should be enabled,p2,Compliance
+EC2,EC2 instance IAM role should not allow defense evasion impact of AWS security services access,p2,Compliance
+EC2,EC2 instance IAM role should not allow security group write access,p2,Compliance
+EC2,EC2 instance should have EBS optimization enabled,p2,Compliance
+EC2,EC2 instances should not be attached to 'launch wizard' security groups,p2,Compliance
+ECS,ECS clusters encryption at rest should be enabled,p2,Compliance
+ECS,ECS clusters should have container insights enabled,p2,Compliance
+EKS,EKS clusters should not use multiple security groups,p2,Compliance
+Elasticsearch,Elasticsearch domains should have cognito authentication enabled,p2,Compliance
+Elasticsearch,Elasticsearch domains should have internal user database enabled,p2,Compliance
+ELB,ELB network load balancers should have TLS listener security policy configured,p2,
+IAM,Ensure access to AWSCloudShellFullAccess is restricted,p2,Compliance
+IAM,Ensure a support role has been created to manage incidents with AWS Support,p2,Compliance
+IAM,Ensure IAM password policy prevents password reuse,p2,Compliance
+IAM,Ensure that IAM Access analyzer is enabled for all regions,p2,Compliance
+IAM,IAM Access analyzer should be enabled without findings,p2,Compliance
+IAM,IAM AWS managed policies should be attached to IAM role,p2,Compliance
+IAM,IAM inline policy should not have administrative privileges,p2,Compliance
+IAM,IAM password policies for users should have strong configurations,p2,Compliance
+IAM,IAM policies should not allow full '*' administrative privileges,p2,Compliance
+IAM,IAM policy should be in use,p2,Compliance
+IAM,IAM policy should not grant full access to cloudtrail service,p2,Compliance
+IAM,IAM policy should not grant full access to KMS service,p2,Compliance
+IAM,IAM policy should not have statements with admin access,p2,Compliance
+IAM,IAM roles should not have any assume role policies attached,p2,Compliance
+IAM,IAM roles should not have read only access for external AWS accounts,p2,Compliance
+IAM,IAM root user MFA should be enabled,p2,Compliance
+IAM,IAM Security Audit role should be created to conduct security audits,p2,Compliance
+IAM,IAM user should not have any inline or attached policies,p2,Compliance
+IAM,IAM users should be in at least one group,p2,Compliance
+Neptune,Neptune DB clusters should have deletion protection enabled,p2,Compliance
+Network Firewall,Network Firewall firewalls should have deletion protection enabled,p2,Compliance
+Operational Excellence,CloudFront distributions access logs should be enabled,p2,AWS Well-Architected Framework
+RDS,An RDS event notifications subscription should be configured for critical database security group events,p2,Compliance
+RDS,Database logging should be enabled,p2,Compliance
+RDS,RDS Aurora clusters should have backtracking enabled,p2,Compliance
+RDS,RDS DB clusters should have automatic minor version upgrade enabled,p2,Compliance
+RDS,RDS DB instance and cluster enhanced monitoring should be enabled,p2,Compliance
+RDS,RDS DB instance automatic minor version upgrade should be enabled,p2,Compliance
+RDS,RDS DB instance backup should be enabled,p2,Compliance
+RDS,RDS DB instance multiple az should be enabled,p2,Compliance
+RDS,RDS DB instances should have deletion protection enabled,p2,Compliance
+RDS,RDS DB instances should have iam authentication enabled,p2,Compliance
+Redshift,AWS Redshift clusters should have automatic snapshots enabled,p2,Compliance
+Redshift,AWS Redshift enhanced VPC routing should be enabled,p2,Compliance
+Redshift,AWS Redshift should have automatic upgrades to major versions enabled,p2,Compliance
+Redshift,Redshift cluster audit logging and encryption should be enabled,p2,Compliance
+Reliability,ACM certificates should have transparency logging enabled,p2,AWS Well-Architected Framework
+Reliability,API Gateway stage logging should be enabled,p2,AWS Well-Architected Framework
+Reliability,AWS Redshift enhanced VPC routing should be enabled,p2,AWS Well-Architected Framework
+Reliability,Backup recovery points manual deletion should be disabled,p2,AWS Well-Architected Framework
+Reliability,CodeBuild projects should have logging enabled,p2,AWS Well-Architected Framework
+Reliability,Database logging should be enabled,p2,AWS Well-Architected Framework
+Reliability,DynamoDB table auto scaling should be enabled,p2,AWS Well-Architected Framework
+Reliability,EBS default encryption should be enabled,p2,AWS Well-Architected Framework
+Reliability,EC2 instance detailed monitoring should be enabled,p2,AWS Well-Architected Framework
+Reliability,ECS clusters should have container insights enabled,p2,AWS Well-Architected Framework
+Reliability,ECS task definitions should have logging enabled,p2,AWS Well-Architected Framework
+Reliability,ElastiCache Redis cluster automatic backup should be enabled with retention period of 15 days or greater,p2,AWS Well-Architected Framework
+Reliability,Elastic Beanstalk enhanced health reporting should be enabled,p2,AWS Well-Architected Framework
+Reliability,ELB classic load balancers should have cross-zone load balancing enabled,p2,AWS Well-Architected Framework
+Reliability,RDS Aurora clusters should have backtracking enabled,p2,AWS Well-Architected Framework
+Reliability,RDS DB instance automatic minor version upgrade should be enabled,p2,AWS Well-Architected Framework
+Reliability,RDS DB instance encryption at rest should be enabled,p2,AWS Well-Architected Framework
+Reliability,RDS DB instance multiple az should be enabled,p2,AWS Well-Architected Framework
+Reliability,Route 53 zones should have query logging enabled,p2,AWS Well-Architected Framework
+Reliability,S3 bucket cross-region replication should be enabled,p2,AWS Well-Architected Framework
+Reliability,S3 bucket default encryption should be enabled,p2,AWS Well-Architected Framework
+Reliability,S3 buckets object logging should be enabled,p2,AWS Well-Architected Framework
+Route 53,Route 53 domains auto renew should be enabled,p2,Compliance
+S3,Ensure MFA Delete is enabled on S3 buckets,p2,Compliance
+S3,S3 access points should have block public access settings enabled,p2,Compliance
+S3,S3 bucket cross-region replication should be enabled,p2,Compliance
+S3,S3 bucket default encryption should be enabled,p2,Compliance
+S3,S3 bucket object lock should be enabled,p2,Compliance
+S3,S3 buckets object logging should be enabled,p2,Compliance
+S3,S3 buckets should have event notifications enabled,p2,Compliance
+S3,S3 buckets with versioning enabled should have lifecycle policies configured,p2,Compliance
+S3,S3 bucket versioning should be enabled,p2,Compliance
+SageMaker,SageMaker endpoint configuration encryption should be enabled,p2,Compliance
+SageMaker,SageMaker models should have network isolation enabled,p2,Compliance
+SageMaker,SageMaker notebook instance encryption should be enabled,p2,Compliance
+SageMaker,SageMaker training jobs should be enabled with inter-container traffic encryption,p2,Compliance
+SageMaker,SageMaker training jobs should have network isolation enabled,p2,Compliance
+SageMaker,SageMaker training jobs volumes and outputs should have KMS encryption enabled,p2,Compliance
+SSM,SSM parameters encryption should be enabled,p2,Compliance
+VPC,Unused EC2 security groups should be removed,p2,Compliance
+VPC,VPC endpoint services should have acceptance required enabled,p2,Compliance
+VPC,VPC flow logs should be enabled,p2,Compliance
+VPC,VPC security groups should be associated with at least one ENI,p2,Compliance
+VPC,VPC Security groups should only allow unrestricted incoming traffic for authorized ports,p2,Compliance
+VPC,VPC security groups should restrict uses of 'launch-wizard' security groups.,p2,Compliance
+WAFv2,AWS WAF rules should have CloudWatch metrics enabled,p2,Compliance
+WorkSpaces,WorkSpaces root and user volume encryption should be enabled,p2,Compliance

@@ -1,0 +1,58 @@
+import pandas as pd
+
+# Step 1: Load the priority CSV files
+def load_priority_data(priority_files):
+    """
+    Load priority CSV files and return a dictionary mapping controls to their respective priorities.
+    """
+    priority_dict = {}
+    
+    # Loop through each file and assign the corresponding priority (p1, p2, p3)
+    for file, priority in priority_files.items():
+        df = pd.read_csv(file)
+        # For each control in the file, assign the respective priority
+        for control in df['Control']:
+            priority_dict[control.strip()] = priority
+    
+    return priority_dict
+
+# Step 2: Load the Powerpipe report and assign priorities based on the Control column
+def assign_priorities_to_powerpipe(powerpipe_file, priority_dict):
+    """
+    Load Powerpipe report and assign priorities to controls based on the priority dictionary.
+    """
+    # Load the Powerpipe report into a DataFrame
+    powerpipe_df = pd.read_csv(powerpipe_file)
+    
+    # Add a new 'priority' column based on the 'Control' column
+    powerpipe_df['priority'] = powerpipe_df['control'].apply(lambda control: priority_dict.get(control.strip(), 'Unknown'))
+
+    return powerpipe_df
+
+# Step 3: Save the updated Powerpipe report with priorities
+def save_updated_report(df, output_file):
+    """
+    Save the updated DataFrame with priorities to a new CSV file.
+    """
+    df.to_csv(output_file, index=False)
+    print(f"Updated Powerpipe report with priorities saved to {output_file}")
+
+# Step 4: Main function to orchestrate the steps
+if __name__ == "__main__":
+    # Define the priority files and their corresponding priority level
+    priority_files = {
+        'priority1.csv': 'p1',
+        'priority2.csv': 'p2',
+        'priority3.csv': 'p3'
+    }
+    
+    # Step 1: Create the priority dictionary from priority CSV files
+    priority_dict = load_priority_data(priority_files)
+    
+    # Step 2: Load the Powerpipe report and assign priorities
+    powerpipe_file = 'powerpipe_report_with_priorities.csv'  # Replace with the actual file name of your Powerpipe report
+    updated_powerpipe_df = assign_priorities_to_powerpipe(powerpipe_file, priority_dict)
+    
+    # Step 3: Save the updated report to a new CSV file
+    output_file = 'powerpipe_report_with_assigned_priorities.csv'  # You can change the output file name
+    save_updated_report(updated_powerpipe_df, output_file)

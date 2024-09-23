@@ -1,0 +1,249 @@
++------------------------+------------------------------------------------------------------------------------------------------------+------------+--------------------------------+
+|        Category        |                                                  Control                                                   |  priority  |              Mod               |
++------------------------+------------------------------------------------------------------------------------------------------------+------------+--------------------------------+
+|        Account         |                              AWS account should be part of AWS Organizations                               |     p3     |           Compliance           |
+|      API Gateway       |                       Access logging should be configured for API Gateway V2 Stages                        |     p3     |           Compliance           |
+|      API Gateway       |                         API Gateway methods request parameter should be validated                          |     p3     |           Compliance           |
+|      API Gateway       |                     API Gateway REST API stages should have AWS X-Ray tracing enabled                      |     p3     |           Compliance           |
+|      API Gateway       |                              API Gateway stage should be associated with waf                               |     p3     |           Compliance           |
+|      API Gateway       |                           API Gateway stages should have authorizers configured                            |     p3     |           Compliance           |
+|      API Gateway       |                               API Gateway V2 authorizer should be configured                               |     p3     |           Compliance           |
+|       AppStream        |           AppStream fleet idle disconnect timeout should be set to less than or equal to 10 mins           |     p3     |           Compliance           |
+|       AppStream        |                   AppStream fleet max user duration should be set to less than 10 hours                    |     p3     |           Compliance           |
+|       AppStream        |          AppStream fleet session disconnect timeout should be set to less than or equal to 5 mins          |     p3     |           Compliance           |
+|         Athena         |                               Athena workgroups should be encrypted at rest                                |     p3     |           Compliance           |
+|         Athena         |                               Athena workgroups should enforce configuration                               |     p3     |           Compliance           |
+|      Auto Scaling      |                        Auto Scaling groups should not have any suspended processes                         |     p3     |           Compliance           |
+|      Auto Scaling      |                     Auto Scaling groups with a load balancer should use health checks                      |     p3     |           Compliance           |
+|      Auto Scaling      |                          Auto Scaling launch config public IP should be disabled                           |     p3     |           Compliance           |
+|      Auto Scaling      |  EC2 auto scaling group launch configurations should not have metadata response hop limit greater than 1   |     p3     |           Compliance           |
+|      Auto Scaling      |         EC2 auto scaling group launch configurations user data should not have any sensitive data          |     p3     |           Compliance           |
+|      Auto Scaling      |                      EC2 auto scaling groups should cover multiple availability zones                      |     p3     |           Compliance           |
+|      Auto Scaling      |                          EC2 Auto Scaling groups should use EC2 launch templates                           |     p3     |           Compliance           |
+|      Auto Scaling      |         EC2 auto scaling groups should use multiple instance types in multiple availability zones          |     p3     |           Compliance           |
+|      Auto Scaling      |              Ensure EC2 Auto Scaling Groups Propagate Tags to EC2 Instances that it launches               |     p3     |           Compliance           |
+|         Backup         |                             Backup plan min frequency and min retention check                              |     p3     |           Compliance           |
+|         Backup         |                                    Backup plan should exist in a region                                    |     p3     |           Compliance           |
+|         Backup         |                         Backup recovery points manual deletion should be disabled                          |     p3     |           Compliance           |
+|         Backup         |                      Backup recovery points should not expire before retention period                      |     p3     |           Compliance           |
+|         Backup         |                                   Backup vaults should exist in a region                                   |     p3     |           Compliance           |
+|     CloudFormation     |                        CloudFormation stacks differ from the expected configuration                        |     p3     |           Compliance           |
+|       CloudFront       |                     CloudFront distributions should encrypt traffic to non S3 origins                      |     p3     |           Compliance           |
+|       CloudFront       |                   CloudFront distributions should have a default root object configured                    |     p3     |           Compliance           |
+|       CloudFront       |                      CloudFront distributions should have origin failover configured                       |     p3     |           Compliance           |
+|       CloudFront       |                    CloudFront distributions should not point to non-existent S3 origins                    |     p3     |           Compliance           |
+|       CloudFront       | CloudFront distributions should not use deprecated SSL protocols between edge locations and custom origins |     p3     |           Compliance           |
+|       CloudFront       |                       CloudFront distributions should require encryption in transit                        |     p3     |           Compliance           |
+|       CloudTrail       |                           All S3 buckets should log S3 data events in CloudTrail                           |     p3     |           Compliance           |
+|       CloudTrail       |                  At least one multi-region AWS CloudTrail should be present in an account                  |     p3     |           Compliance           |
+|       CloudTrail       |                  CloudTrail multi region trails should be integrated with CloudWatch logs                  |     p3     |           Compliance           |
+|       CloudTrail       |                        CloudTrail trails should be integrated with CloudWatch logs                         |     p3     |           Compliance           |
+|       CloudTrail       |                     Ensure the S3 bucket CloudTrail logs to is not publicly accessible                     |     p3     |           Compliance           |
+|       CloudWatch       |                             CloudWatch alarm should have an action configured                              |     p3     |           Compliance           |
+|       CloudWatch       |                             CloudWatch should not allow cross-account sharing                              |     p3     |           Compliance           |
+|       CloudWatch       |              Ensure a log metric filter and alarm exist for AWS Config configuration changes               |     p3     |           Compliance           |
+|       CloudWatch       |       Ensure a log metric filter and alarm exist for AWS Management Console authentication failures        |     p3     |           Compliance           |
+|       CloudWatch       |       Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL)        |     p3     |           Compliance           |
+|       CloudWatch       |                 Ensure a log metric filter and alarm exist for changes to network gateways                 |     p3     |           Compliance           |
+|       CloudWatch       |              Ensure a log metric filter and alarm exist for CloudTrail configuration changes               |     p3     |           Compliance           |
+|       CloudWatch       |  Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer managed keys   |     p3     |           Compliance           |
+|       CloudWatch       |                     Ensure a log metric filter and alarm exist for IAM policy changes                      |     p3     |           Compliance           |
+|       CloudWatch       |                     Ensure a log metric filter and alarm exist for route table changes                     |     p3     |           Compliance           |
+|       CloudWatch       |                  Ensure a log metric filter and alarm exist for S3 bucket policy changes                   |     p3     |           Compliance           |
+|       CloudWatch       |                   Ensure a log metric filter and alarm exist for usage of 'root' account                   |     p3     |           Compliance           |
+|       CloudWatch       |                         Ensure a log metric filter and alarm exist for VPC changes                         |     p3     |           Compliance           |
+|       CloudWatch       |                               Ensure AWS Organizations changes are monitored                               |     p3     |           Compliance           |
+|       CloudWatch       |                           Log group retention period should be at least 365 days                           |     p3     |           Compliance           |
+|       CodeBuild        |                   CodeBuild GitHub or Bitbucket source repository URLs should use OAuth                    |     p3     |           Compliance           |
+|       CodeBuild        |                       CodeBuild projects should not be unused for 90 days or greater                       |     p3     |           Compliance           |
+|       CodeBuild        |                       CodeBuild projects should not use an user controlled buildspec                       |     p3     |           Compliance           |
+|       CodeDeploy       |               Codedeploy deployment groups lambda allatonce traffic shift should be disabled               |     p3     |           Compliance           |
+|         Config         |                       Config configuration recorder should not fail to deliver logs                        |     p3     |           Compliance           |
+|          DAX           |                                             Directory Service                                              |     p3     |           Compliance           |
+|          DAX           |               Directory Service directories manual snapshots limit should not be less than 2               |     p3     |           Compliance           |
+|          DMS           |                          Ensure that all the expired DMS certificates are removed                          |     p3     |           Compliance           |
+|       DocumentDB       |                      Amazon DocumentDB manual cluster snapshots should not be public                       |     p3     |           Compliance           |
+|       DocumentDB       |                              DocumentDB instance should be encrypted at rest                               |     p3     |           Compliance           |
+|        DynamoDB        |                                 DynamoDB tables should be in a backup plan                                 |     p3     |           Compliance           |
+|          EBS           |                                     EBS volume snapshots should exist                                      |     p3     |           Compliance           |
+|          EBS           |                              EBS volumes should be attached to EC2 instances                               |     p3     |           Compliance           |
+|          EBS           |                                   EBS volumes should be in a backup plan                                   |     p3     |           Compliance           |
+|          EBS           |                              EBS volumes should be protected by a backup plan                              |     p3     |           Compliance           |
+|          EC2           |                AWS EC2 launch templates should not assign public IPs to network interfaces                 |     p3     |           Compliance           |
+|          EC2           |                                   EC2 AMIs should restrict public access                                   |     p3     |           Compliance           |
+|          EC2           |                     EC2 instance IAM role should not allow cloud log tampering access                      |     p3     |           Compliance           |
+|          EC2           |                  EC2 instance IAM role should not allow database management write access                   |     p3     |           Compliance           |
+|          EC2           |                       EC2 instance IAM role should not allow destruction KMS access                        |     p3     |           Compliance           |
+|          EC2           |                       EC2 instance IAM role should not allow destruction RDS access                        |     p3     |           Compliance           |
+|          EC2           |                    EC2 instance IAM role should not allow elastic IP hijacking access.                     |     p3     |           Compliance           |
+|          EC2           |                       EC2 instance IAM role should not allow management level access                       |     p3     |           Compliance           |
+|          EC2           |           EC2 instance IAM role should not allow new group creation with attached policy access            |     p3     |           Compliance           |
+|          EC2           |            EC2 instance IAM role should not allow new role creation with attached policy access            |     p3     |           Compliance           |
+|          EC2           |            EC2 instance IAM role should not allow new user creation with attached policy access            |     p3     |           Compliance           |
+|          EC2           |                     EC2 instance IAM role should not allow oraganization write access                      |     p3     |           Compliance           |
+|          EC2           |                  EC2 instance IAM role should not allow privilege escalation risk access                   |     p3     |           Compliance           |
+|          EC2           |           EC2 instance IAM role should not allow to alter critical s3 permissions configuration            |     p3     |           Compliance           |
+|          EC2           |               EC2 instance IAM role should not allow write access to resource based policies               |     p3     |           Compliance           |
+|          EC2           |                         EC2 instance IAM role should not allow write level access                          |     p3     |           Compliance           |
+|          EC2           |            EC2 instance IAM role should not allow write permission on critical s3 configuration            |     p3     |           Compliance           |
+|          EC2           |               EC2 instance IAM role should not be attached with credentials exposure access                |     p3     |           Compliance           |
+|          EC2           |               EC2 instance IAM should not allow pass role and lambda invoke function access.               |     p3     |           Compliance           |
+|          EC2           |                  EC2 instances high level findings should not be there in inspector scans                  |     p3     |           Compliance           |
+|          EC2           |                                      EC2 instances should be in a VPC                                      |     p3     |           Compliance           |
+|          EC2           |                              EC2 instances should be protected by backup plan                              |     p3     |           Compliance           |
+|          EC2           |                               EC2 instances should have IAM profile attached                               |     p3     |           Compliance           |
+|          EC2           |                          EC2 instances should not use key pairs in running state                           |     p3     |           Compliance           |
+|          EC2           |                                 EC2 instances should not use multiple ENIs                                 |     p3     |           Compliance           |
+|          EC2           |                              EC2 instances user data should not have secrets                               |     p3     |           Compliance           |
+|          EC2           |                             EC2 stopped instances should be removed in 30 days                             |     p3     |           Compliance           |
+|          EC2           |                  EC2 transit gateways should have auto accept shared attachments disabled                  |     p3     |           Compliance           |
+|          EC2           |                               Ensure Images (AMI) are not older than 90 days                               |     p3     |           Compliance           |
+|          EC2           |                                    Ensure Images (AMI's) are encrypted                                     |     p3     |           Compliance           |
+|          EC2           |                           Ensure instances stopped for over 90 days are removed                            |     p3     |           Compliance           |
+|          EC2           |                            Ensure no AWS EC2 Instances are older than 180 days                             |     p3     |           Compliance           |
+|          EC2           |                                       Ensure unused ENIs are removed                                       |     p3     |           Compliance           |
+|          EC2           |                             Paravirtual EC2 instance types should not be used                              |     p3     |           Compliance           |
+|          EC2           |                           Public EC2 instances should have IAM profile attached                            |     p3     |           Compliance           |
+|          ECS           |                        At least one instance should be registered with ECS cluster                         |     p3     |           Compliance           |
+|          ECS           |            AWS ECS services should not have public IP addresses assigned to them automatically             |     p3     |           Compliance           |
+|          ECS           |                        ECS cluster container instances should have connected agent                         |     p3     |           Compliance           |
+|          ECS           |                                  ECS cluster instances should be in a VPC                                  |     p3     |           Compliance           |
+|          ECS           |                           ECS cluster should be configured with active services                            |     p3     |           Compliance           |
+|          ECS           |                             ECS services should be attached to a load balancer                             |     p3     |           Compliance           |
+|          ECS           |                 ECS task definition container definitions should be checked for host mode                  |     p3     |           Compliance           |
+|          ECS           |           ECS task definition containers should not have secrets passed as environment variables           |     p3     |           Compliance           |
+|          ECS           |                     ECS task definitions should not share the host's process namespace                     |     p3     |           Compliance           |
+|          EFS           |                             EFS access points should enforce a root directory                              |     p3     |           Compliance           |
+|          EFS           |                              EFS access points should enforce a user identity                              |     p3     |           Compliance           |
+|          EFS           |                               EFS file systems should be encrypted with CMK                                |     p3     |           Compliance           |
+|          EFS           |                            EFS file systems should be protected by backup plan                             |     p3     |           Compliance           |
+|          EKS           |                            EKS clusters endpoint should restrict public access                             |     p3     |           Compliance           |
+|      ElastiCache       |                        ElastiCache clusters should not use the default subnet group                        |     p3     |           Compliance           |
+|      ElastiCache       |             ElastiCache for Redis replication groups before version 6.0 should use Redis Auth              |     p3     |           Compliance           |
+|      ElastiCache       |                   ElastiCache for Redis replication groups should be encrypted with CMK                    |     p3     |           Compliance           |
+|      ElastiCache       |                                             Elastic Beanstalk                                              |     p3     |           Compliance           |
+|      ElastiCache       |       Minor version upgrades should be automatically applied to ElastiCache for Redis cache clusters       |     p3     |           Compliance           |
+|     Elasticsearch      |                            Elasticsearch domain should send logs to CloudWatch                             |     p3     |           Compliance           |
+|     Elasticsearch      |           Elasticsearch domains should be configured with at least three dedicated master nodes            |     p3     |           Compliance           |
+|     Elasticsearch      |                        Elasticsearch domains should have at least three data nodes                         |     p3     |           Compliance           |
+|          ELB           |                       Classic Load Balancers should have connection draining enabled                       |     p3     |           Compliance           |
+|          ELB           |             ELB application and network load balancers should only use SSL or HTTPS listeners              |     p3     |           Compliance           |
+|          ELB           |                      ELB application and network load balancers should use listeners                       |     p3     |           Compliance           |
+|          ELB           |     ELB application load balancers secured listener certificate should not expire within next 30 days      |     p3     |           Compliance           |
+|          ELB           |      ELB application load balancers secured listener certificate should not expire within next 7 days      |     p3     |           Compliance           |
+|          ELB           |   ELB application load balancers should be configured with defensive or strictest desync mitigation mode   |     p3     |           Compliance           |
+|          ELB           |                         ELB application load balancers should be drop HTTP headers                         |     p3     |           Compliance           |
+|          ELB           |                   ELB application load balancers should have at least one outbound rule                    |     p3     |           Compliance           |
+|          ELB           |             ELB application load balancers should have Web Application Firewall (WAF) enabled              |     p3     |           Compliance           |
+|          ELB           |     ELB classic load balancers should be configured with defensive or strictest desync mitigation mode     |     p3     |           Compliance           |
+|          ELB           |                      ELB classic load balancers should have at least one inbound rule                      |     p3     |           Compliance           |
+|          ELB           |                     ELB classic load balancers should have at least one outbound rule                      |     p3     |           Compliance           |
+|          ELB           |                  ELB classic load balancers should have at least one registered instance                   |     p3     |           Compliance           |
+|          ELB           |                  ELB classic load balancers should have cross-zone load balancing enabled                  |     p3     |           Compliance           |
+|          ELB           |                     ELB classic load balancers should span multiple availability zones                     |     p3     |           Compliance           |
+|          ELB           |                           ELB classic load balancers should use SSL certificates                           |     p3     |           Compliance           |
+|          ELB           |                          ELB listeners SSL/TLS protocol version should be checked                          |     p3     |           Compliance           |
+|          EMR           |                                   EMR cluster Kerberos should be enabled                                   |     p3     |           Compliance           |
+|          EMR           |                       EMR clusters client side encryption (CSE CMK) enabled with CMK                       |     p3     |           Compliance           |
+|          EMR           |                            EMR clusters encryption in transit should be enabled                            |     p3     |           Compliance           |
+|          EMR           |                            EMR clusters local disk encryption should be enabled                            |     p3     |           Compliance           |
+|          EMR           |                       EMR clusters server side encryption (SSE KMS) enabled with KMS                       |     p3     |           Compliance           |
+|      EventBridge       |                EventBridge custom event buses should have a resource-based policy attached                 |     p3     |           Compliance           |
+|          IAM           |                         Ensure IAM policy should not grant full access to service                          |     p3     |           Compliance           |
+|          IAM           |                        Ensure IAM role not attached with Administratoraccess policy                        |     p3     |           Compliance           |
+|          IAM           |                      Ensure IAM users are assigned access keys and passwords at setup                      |     p3     |           Compliance           |
+|          IAM           |                  Ensure managed IAM policies should not allow blocked actions on KMS keys                  |     p3     |           Compliance           |
+|          IAM           |               Ensure that all the expired SSL/TLS certificates stored in AWS IAM are removed               |     p3     |           Compliance           |
+|          IAM           |                Ensure there is only one active access key available for any single IAM user                |     p3     |           Compliance           |
+|          IAM           |                  IAM custom policy should not have overly permissive STS role assumption                   |     p3     |           Compliance           |
+|          IAM           |                       IAM roles that have not been used in 60 days should be removed                       |     p3     |           Compliance           |
+|          IAM           |                                 IAM root user should not have access keys                                  |     p3     |           Compliance           |
+|          IAM           |                 IAM unattached custom policy should not have statements with admin access                  |     p3     |           Compliance           |
+|          KMS           |                                          KMS key should be in use                                          |     p3     |           Compliance           |
+|         Lambda         |                           Lambda functions concurrent execution limit configured                           |     p3     |           Compliance           |
+|         Lambda         |                      Lambda functions CORS configuration should not allow all origins                      |     p3     |           Compliance           |
+|         Lambda         |                     Lambda functions should operate in more than one availability zone                     |     p3     |           Compliance           |
+|         Lambda         |                               Lambda functions should restrict public access                               |     p3     |           Compliance           |
+|         Lambda         |                                Lambda functions should restrict public URL                                 |     p3     |           Compliance           |
+|         Lambda         |                                Lambda functions should use latest runtimes                                 |     p3     |           Compliance           |
+|       Lightsail        |                       Disable IPv6 Networking if not in use within your organization                       |     p3     |           Compliance           |
+|        Neptune         |                             Neptune DB cluster snapshots should not be public                              |     p3     |           Compliance           |
+|        Neptune         |                     Neptune DB clusters should be configured to copy tags to snapshots                     |     p3     |           Compliance           |
+|        Neptune         |                              Neptune DB clusters should not use public_subnet                              |     p3     |           Compliance           |
+|    Network Firewall    |                                Networkfirewall firewall should be in a VPC                                 |     p3     |           Compliance           |
+|       OpenSearch       |                OpenSearch domains should be updated to the latest service software version                 |     p3     |           Compliance           |
+|       OpenSearch       |                          OpenSearch domains should have at least three data nodes                          |     p3     |           Compliance           |
+| Operational Excellence |                             SSM managed instance patching should be compliant                              |     p3     | AWS Well-Architected Framework |
+|          RDS           |          An RDS event notifications subscription should be configured for critical cluster events          |     p3     |           Compliance           |
+|          RDS           |     An RDS event notifications subscription should be configured for critical database instance events     |     p3     |           Compliance           |
+|          RDS           | An RDS event notifications subscription should be configured for critical database parameter group events  |     p3     |           Compliance           |
+|          RDS           |                   Aurora MySQL DB clusters should publish audit logs to CloudWatch Logs                    |     p3     |           Compliance           |
+|          RDS           |           RDS Aurora PostgreSQL clusters should not be exposed to local file read vulnerability            |     p3     |           Compliance           |
+|          RDS           |                       RDS DB clusters should be configured to copy tags to snapshots                       |     p3     |           Compliance           |
+|          RDS           |               RDS DB instances backup retention period should be greater than or equal to 7                |     p3     |           Compliance           |
+|          RDS           |                   RDS DB instances CA certificates should not expire within next 7 days                    |     p3     |           Compliance           |
+|          RDS           |                              RDS DB instances connections should be encrypted                              |     p3     |           Compliance           |
+|          RDS           |                             RDS DB instance should be protected by backup plan                             |     p3     |           Compliance           |
+|          RDS           |                      RDS DB instances should be configured to copy tags to snapshots                       |     p3     |           Compliance           |
+|          RDS           |                                RDS DB instances should be in a backup plan                                 |     p3     |           Compliance           |
+|          RDS           |                               RDS DB instances should not use public subnet                                |     p3     |           Compliance           |
+|          RDS           |                                RDS DB snapshots should be encrypted at rest                                |     p3     |           Compliance           |
+|          RDS           |             RDS PostgreSQL DB instances should not be exposed to local file read vulnerability             |     p3     |           Compliance           |
+|        Redshift        |                      AWS Redshift clusters should not use the default Admin username                       |     p3     |           Compliance           |
+|        Redshift        |                           AWS Redshift should have required maintenance settings                           |     p3     |           Compliance           |
+|        Redshift        |                         Redshift clusters should not use the default database name                         |     p3     |           Compliance           |
+|      Reliability       |                  Both VPN tunnels provided by AWS Site-to-Site VPN should be in UP status                  |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                             DynamoDB table should be protected by backup plan                              |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                                 DynamoDB tables should be in a backup plan                                 |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                      EC2 auto scaling groups should cover multiple availability zones                      |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                                  ECS cluster instances should be in a VPC                                  |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                     ELB classic load balancers should span multiple availability zones                     |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                             FSx file system should be protected by backup plan                             |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                     Lambda functions should operate in more than one availability zone                     |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                           RDS Aurora clusters should be protected by backup plan                           |     p3     | AWS Well-Architected Framework |
+|      Reliability       |                                RDS DB snapshots should be encrypted at rest                                |     p3     | AWS Well-Architected Framework |
+|        Route 53        |                                   Route 53 domains should not be expired                                   |     p3     |           Compliance           |
+|        Route 53        |                           Route 53 domains should not expire within next 30 days                           |     p3     |           Compliance           |
+|        Route 53        |                           Route 53 domains should not expire within next 7 days                            |     p3     |           Compliance           |
+|           S3           |          AWS S3 permissions granted to other AWS accounts in bucket policies should be restricted          |     p3     |           Compliance           |
+|           S3           |                            S3 buckets should have lifecycle policies configured                            |     p3     |           Compliance           |
+|           S3           |                               S3 buckets should prohibit public read access                                |     p3     |           Compliance           |
+|           S3           |                            S3 buckets static website hosting should be disabled                            |     p3     |           Compliance           |
+|           S3           |                            S3 public access should be blocked at account level                             |     p3     |           Compliance           |
+|           S3           |                            S3 public access should be blocked at bucket levels                             |     p3     |           Compliance           |
+|       SageMaker        |                                    SageMaker models should be in a VPC                                     |     p3     |           Compliance           |
+|       SageMaker        |                        SageMaker notebook instances root access should be disabled                         |     p3     |           Compliance           |
+|       SageMaker        |                         SageMaker notebook instances should be encrypted using CMK                         |     p3     |           Compliance           |
+|       SageMaker        |                              SageMaker notebook instances should be in a VPC                               |     p3     |           Compliance           |
+|       SageMaker        |                    SageMaker notebook instances should not have direct internet access                     |     p3     |           Compliance           |
+|       SageMaker        |                                  SageMaker training jobs should be in VPC                                  |     p3     |           Compliance           |
+|    Secrets Manager     |                                   Remove unused Secrets Manager secrets                                    |     p3     |           Compliance           |
+|    Secrets Manager     |                   Secrets Manager secrets should be rotated as per the rotation schedule                   |     p3     |           Compliance           |
+|    Secrets Manager     |                Secrets Manager secrets should be rotated within a specified number of days                 |     p3     |           Compliance           |
+|    Secrets Manager     |                  Secrets Manager secrets should be rotated within specific number of days                  |     p3     |           Compliance           |
+|          SNS           |           Logging of delivery status should be enabled for notification messages sent to a topic           |     p3     |           Compliance           |
+|          SNS           |                            SNS topic policies should prohibit publishing access                            |     p3     |           Compliance           |
+|          SQS           |                                 AWS SQS queues should be encrypted at rest                                 |     p3     |           Compliance           |
+|          SQS           |                              SQS queue policies should prohibit public access                              |     p3     |           Compliance           |
+|          SQS           |                         SQS queues should be configured with a dead-letter queue.                          |     p3     |           Compliance           |
+|          SQS           |                                SQS queues should be encrypted with KMS CMK                                 |     p3     |           Compliance           |
+|          SSM           |                           SSM managed instance associations should be compliant                            |     p3     |           Compliance           |
+|          VPC           |                               Both VPN tunnels provided by AWS Site-to-Site                                |     p3     |           Compliance           |
+|          VPC           |                         VPC EIPs should be associated with an EC2 instance or ENI                          |     p3     |           Compliance           |
+|          VPC           |                            VPC gateway endpoints should restrict public access                             |     p3     |           Compliance           |
+|          VPC           |                         VPC internet gateways should be attached to authorized vpc                         |     p3     |           Compliance           |
+|          VPC           |            VPC network access control lists (network ACLs) should be associated with a subnet.             |     p3     |           Compliance           |
+|          VPC           |                            VPC route table should restrict public access to IGW                            |     p3     |           Compliance           |
+|          VPC           |                               VPC should be configured to use VPC endpoints                                |     p3     |           Compliance           |
+|          VPC           |                      VPCs peering connection route tables should have least privilege                      |     p3     |           Compliance           |
+|          VPC           |                       VPCs peering connection should not be allowed in cross account                       |     p3     |           Compliance           |
+|          VPC           |                                           VPCs should be in use                                            |     p3     |           Compliance           |
+|          VPC           |                                   VPCs should exist in multiple regions                                    |     p3     |           Compliance           |
+|          VPC           |                          VPCs subnets should exist in multiple availability zones                          |     p3     |           Compliance           |
+|          WAF           |                            WAF global rule group should have at least one rule                             |     p3     |           Compliance           |
+|          WAF           |                             WAF global rule should have at least one condition                             |     p3     |           Compliance           |
+|          WAF           |                       WAF regional rule group should have at least one rule attached                       |     p3     |           Compliance           |
+|          WAF           |                            WAF regional rule should have at least one condition                            |     p3     |           Compliance           |
+|          WAF           |                 WAF regional web ACL should have at least one rule or rule group attached                  |     p3     |           Compliance           |
+|         WAFv2          |                        A WAFV2 web ACL should have at least one rule or rule group                         |     p3     |           Compliance           |
++------------------------+------------------------------------------------------------------------------------------------------------+------------+--------------------------------+
