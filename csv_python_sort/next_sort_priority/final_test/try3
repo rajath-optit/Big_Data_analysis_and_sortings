@@ -1,0 +1,43 @@
+import pandas as pd
+
+# Step 1: Load the CSV files
+priority1_file = 'priority1.csv'
+priority2_file = 'priority2.csv'
+priority3_file = 'priority3.csv'
+powerpipe_file = 'powerpipe_report_with_priorities1.csv'
+
+# Step 2: Read the priority CSV files into DataFrames
+priority1_df = pd.read_csv(priority1_file)
+priority2_df = pd.read_csv(priority2_file)
+priority3_df = pd.read_csv(priority3_file)
+
+# Step 3: Create a dictionary that maps controls to priorities
+priority_dict = {}
+
+# Add p1 priorities to the dictionary
+for _, row in priority1_df.iterrows():
+    priority_dict[row['Control']] = 'p1'
+
+# Add p2 priorities to the dictionary
+for _, row in priority2_df.iterrows():
+    priority_dict[row['Control']] = 'p2'
+
+# Add p3 priorities to the dictionary
+for _, row in priority3_df.iterrows():
+    priority_dict[row['Control']] = 'p3'
+
+# Step 4: Read the powerpipe report CSV into a DataFrame
+powerpipe_df = pd.read_csv(powerpipe_file)
+
+# Step 5: Create a function to assign priorities based on control
+def assign_priority(control):
+    return priority_dict.get(control, 'No Priority')  # Default to 'No Priority' if not found
+
+# Step 6: Apply the function to the 'control' column and create a new 'priority' column
+powerpipe_df['priority'] = powerpipe_df['control'].apply(assign_priority)
+
+# Step 7: Save the updated DataFrame with priorities to a new CSV
+output_file = 'powerpipe_report_with_priorities_updated.csv'
+powerpipe_df.to_csv(output_file, index=False)
+
+print(f"Updated powerpipe report with priorities saved to {output_file}")
